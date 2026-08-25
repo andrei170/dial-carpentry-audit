@@ -1,0 +1,256 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dial Carpentry — Website & Advertising Audit</title><style>
+:root{--bg:#0d1117;--panel:#161b22;--ink:#e6edf3;--mut:#9aa7b4;--line:#2a3340;--accent:#2f81f7;
+  --good:#3fb950;--bad:#f85149;--gradF:#f85149;--gradD:#e8702a;--gradC:#d29922;--gradB:#3fb950;--gradA:#2ea043;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--mut);font-weight:600}
+header{padding:46px 0 28px;border-bottom:1px solid var(--line);background:radial-gradient(1200px 400px at 70% -10%,rgba(47,129,247,.18),transparent)}
+h1{font-size:30px;font-weight:800;margin:10px 0 6px;letter-spacing:-.01em}
+.sub{color:var(--mut);font-size:15px}
+.hero{display:grid;grid-template-columns:300px 1fr;gap:26px;align-items:center;margin:34px 0 8px}
+@media(max-width:760px){.hero{grid-template-columns:1fr}}
+.gradecard{border:1px solid var(--line);border-radius:18px;padding:26px;text-align:center;position:relative;overflow:hidden}
+.gc-F{background:linear-gradient(160deg,#2a1410,#1c2330)}.gc-D{background:linear-gradient(160deg,#2a1c10,#1c2330)}
+.gc-C{background:linear-gradient(160deg,#2a2410,#1c2330)}.gc-B{background:linear-gradient(160deg,#102a1a,#1c2330)}
+.bigletter{font-size:96px;font-weight:900;line-height:1;position:relative}
+.bl-F{color:var(--gradF);text-shadow:0 0 40px rgba(248,81,73,.45)}
+.bl-D{color:var(--gradD);text-shadow:0 0 40px rgba(232,112,42,.45)}
+.bl-C{color:var(--gradC);text-shadow:0 0 40px rgba(210,153,34,.45)}
+.score100{font-size:18px;color:var(--mut);margin-top:6px;position:relative}
+.heroread h2{font-size:21px;font-weight:800;margin-bottom:10px}
+.heroread p{color:var(--mut);font-size:15.5px}
+.heroread .tag{display:inline-block;margin-top:14px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--ink);background:var(--panel)}
+section{padding:34px 0;border-bottom:1px solid var(--line)}
+.h{font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:.14em;font-weight:700;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+.row{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}
+.rname{font-weight:600;font-size:15px}
+.bar{height:7px;background:#0b0f15;border-radius:99px;margin-top:9px;overflow:hidden}
+.fill{height:100%;border-radius:99px}
+.badge{font-weight:800;font-size:15px;min-width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#0d1117}
+.gF{background:var(--gradF)}.gD{background:var(--gradD)}.gC{background:var(--gradC)}.gB{background:var(--gradB);color:#06210f}.gA{background:var(--gradA);color:#06210f}
+.sc{font-size:12px;color:var(--mut);margin-top:3px}
+.flag{background:linear-gradient(160deg,#2a1410,#161b22);border:1px solid #6f2a1f;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.flag .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--bad);font-weight:700;margin-bottom:8px}
+.win{background:linear-gradient(160deg,#0f2417,#161b22);border:1px solid #1f6f3a;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.win .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--good);font-weight:700;margin-bottom:8px}
+.warn{background:linear-gradient(160deg,#2a2410,#161b22);border:1px solid #6f5a1f;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.warn .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--gradC);font-weight:700;margin-bottom:8px}
+.flag p,.win p,.warn p{color:var(--mut);font-size:14.5px;margin-bottom:9px}
+.flag p:last-child,.win p:last-child,.warn p:last-child{margin-bottom:0}
+.flag b,.win b,.warn b{color:var(--ink)}
+.flag ul,.win ul,.warn ul{margin:0 0 9px 20px;color:var(--mut);font-size:14.5px}
+.flag li,.win li,.warn li{margin-bottom:6px}
+.code{background:#0b0f15;border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12.5px;line-height:1.85;color:var(--mut);overflow-x:auto}
+.code .ph{color:#ff9d94;font-weight:700}.code .ok{color:#84e0a8;font-weight:700}.code .c{color:#5b6672}
+.cmp{width:100%;border-collapse:collapse;font-size:14px;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.cmp th{text-align:left;padding:11px 14px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);border-bottom:1px solid var(--line);font-weight:700}
+.cmp td{padding:11px 14px;border-bottom:1px solid var(--line);color:var(--mut);vertical-align:top}
+.cmp tr:last-child td{border-bottom:none}.cmp td b{color:var(--ink)}.cmp tr.you td{background:#241a12}
+.cmp .yes{color:var(--good);font-weight:700}.cmp .no{color:var(--bad);font-weight:700}
+.opp{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:760px){.opp{grid-template-columns:1fr}}
+.ocard{background:linear-gradient(160deg,#0f2417,#161b22);border:1px solid #1f6f3a;border-radius:14px;padding:20px;text-align:center}
+.ocard .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut)}
+.ocard .big{font-size:30px;font-weight:900;color:var(--good);margin:8px 0 2px}
+.ocard .small{font-size:13px;color:var(--mut)}
+.oppnote{color:var(--mut);font-size:14px;margin-top:14px}.oppnote b{color:var(--ink)}
+.arrow{display:flex;align-items:center;justify-content:center;gap:18px;margin:6px 0 2px;flex-wrap:wrap}
+.pill{font-size:60px;font-weight:900;line-height:1}
+.pill.from-F{color:var(--gradF)}.pill.from-D{color:var(--gradD)}.pill.from-C{color:var(--gradC)}
+.pill.to{color:var(--gradA)}
+.pilllab{font-size:12px;color:var(--mut);text-align:center;text-transform:uppercase;letter-spacing:.1em}
+.ar{font-size:34px;color:var(--mut)}
+ul.road{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:760px){ul.road{grid-template-columns:1fr}}
+ul.road li{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:11px 14px;font-size:14.5px}
+.road2 li{border-left-color:var(--good)}
+.cta{text-align:center;padding:40px 0 56px}
+.cta h2{font-size:22px;font-weight:800;margin-bottom:8px}
+.cta p{color:var(--mut);font-size:15px}
+footer{color:var(--mut);font-size:12.5px;text-align:center;padding:22px 0 40px;line-height:1.7}
+</style></head><body>
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Website &amp; Advertising Audit</div>
+    <h1>Dial Carpentry &mdash; Swansea &amp; the Gower</h1>
+    <div class="sub">Prepared for Alexander Durrant &middot; Company 14711488 &middot; 25 August 2026 &middot; AG1 Consulting</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="hero">
+    <div class="gradecard gc-C">
+      <div class="bigletter bl-C">C&minus;</div>
+      <div class="score100">44 / 100</div>
+    </div>
+    <div class="heroread">
+      <h2>This is a better site than most we audit. It is losing on proof and measurement, not on craft.</h2>
+      <p>Your page structure is genuinely good &mdash; you already have separate pages for
+      <b>kitchen fitting in Swansea</b>, <b>carpentry and plumbing across the Gower</b> and
+      <b>decking and fencing</b>. Most trades we look at have one page and a phone number. The gap is
+      that <b>nothing is measured, almost nothing is proven</b>, and the homepage makes a visitor click
+      before they can enquire.</p>
+      <span class="tag">Trading since 2006 &middot; limited since 2023 &middot; Loughor, SA4</span>
+    </div>
+  </div>
+
+  <section>
+    <div class="h">The Scorecard</div>
+    <div class="grid">
+      <div class="row"><div><div class="rname">Phone visible and tap-to-call</div><div class="sc">07889 658149 in the header as a real tel: link. Works first tap on mobile.</div></div><div class="badge gA">A</div></div>
+      <div class="row"><div><div class="rname">Local page structure</div><div class="sc">Separate pages named for Swansea and the Gower by service. Genuinely well built.</div></div><div class="badge gA">A&minus;</div></div>
+      <div class="row"><div><div class="rname">Your own project photography</div><div class="sc">Real work &mdash; oak staircase, garden joinery, fencing. Not stock.</div></div><div class="badge gB">B+</div></div>
+      <div class="row"><div><div class="rname">Range of work shown</div><div class="sc">Kitchens, bathrooms, renovations, bespoke storage, decking, landlord work.</div></div><div class="badge gB">B</div></div>
+      <div class="row"><div><div class="rname">Enquiry route from the homepage</div><div class="sc">No form on the homepage. A visitor must click through to /quote-request first.</div></div><div class="badge gD">D</div></div>
+      <div class="row"><div><div class="rname">Homepage title tag</div><div class="sc">Reads only &ldquo;Dial Carpentry&rdquo;. No trade word, no town. That is your Google headline.</div></div><div class="badge gF">F</div></div>
+      <div class="row"><div><div class="rname">Meta description</div><div class="sc">Absent. Google writes its own snippet for you, from whatever it finds.</div></div><div class="badge gF">F</div></div>
+      <div class="row"><div><div class="rname">Analytics and tracking</div><div class="sc">No GA4 tag, no tag manager, no pixel anywhere in the served page.</div></div><div class="badge gF">F</div></div>
+      <div class="row"><div><div class="rname">Accreditations published</div><div class="sc">No FMB, TrustMark, NVQ, CSCS or Which? shown anywhere on the site.</div></div><div class="badge gF">F</div></div>
+      <div class="row"><div><div class="rname">Insurance and guarantee</div><div class="sc">Neither mentioned. Both are standard questions before a kitchen is booked.</div></div><div class="badge gF">F</div></div>
+      <div class="row"><div><div class="rname">Reviews as a rating and a count</div><div class="sc">One written testimonial. No star rating, no review count, on any page.</div></div><div class="badge gD">D&minus;</div></div>
+      <div class="row"><div><div class="rname">Paid advertising</div><div class="sc">Nothing running. No conversion tracking exists to run it against yet.</div></div><div class="badge gF">F</div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="h">The Advertising Problem, Stated Plainly</div>
+    <div class="flag">
+      <div class="lab">You cannot advertise this site profitably today &mdash; and that is fixable in a week</div>
+      <p>There is <b>no GA4 tag, no tag manager and no conversion tracking</b> in your served page
+      source. That is not a small technical nicety. It is the difference between advertising and
+      guessing.</p>
+      <div class="code">
+Without tracking, here is what you can know    <span class="ph">you spent the money</span>
+Here is what you cannot know:
+  Which search brought the enquiry             <span class="ph">&#10007;</span>
+  Which page they were on when they called     <span class="ph">&#10007;</span>
+  What a kitchen enquiry actually costs you    <span class="ph">&#10007;</span>
+  Which of your services pays and which loses  <span class="ph">&#10007;</span>
+      </div>
+      <p>Google's own bidding needs conversion data to optimise against. With none, it optimises for
+      clicks &mdash; and clicks are not jobs. <b>This is the first thing we would fix, before a penny of
+      ad spend, and it is the cheapest item on the whole list.</b></p>
+    </div>
+  </section>
+
+  <section>
+    <div class="h">The Title Tag &mdash; Small Item, Large Consequence</div>
+    <div class="warn">
+      <div class="lab">Your homepage title is the blue line a searcher reads in Google</div>
+      <div class="code">
+What yours says now    <span class="ph">Dial Carpentry</span>
+What it could say      <span class="ok">Carpenter &amp; Kitchen Fitter in Swansea &amp; Gower | Dial Carpentry</span>
+
+Meta description       <span class="ph">&#10007; none written &mdash; Google invents one</span>
+      </div>
+      <p>Somebody searching <b>&ldquo;kitchen fitter Swansea&rdquo;</b> sees a list of blue links. Yours
+      carries no trade word and no town, so it matches nothing they typed and reads as the least
+      relevant result on the page &mdash; regardless of the fact that you are the most experienced
+      carpenter on it.</p>
+      <p><b>Your inner pages are named correctly.</b> That is what makes this frustrating rather than
+      structural: the hard part is already done and the front door is the bit that was missed.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="h">Twenty Years Of Work And One Testimonial</div>
+    <div class="warn">
+      <div class="lab">This is the largest single gap on the site</div>
+      <p>You have been trading since <b>2006</b>. There is <b>one named testimonial</b> on the website
+      &mdash; M Hartnell, Gower &mdash; and no star rating or review count anywhere.</p>
+      <p>A homeowner choosing who fits a &pound;12,000 kitchen is comparing three carpenters in a
+      browser tab each. Two of them will show a number. <b>The number is doing the persuading, and you
+      are not in that comparison</b> &mdash; not because the work is worse, but because twenty years of
+      satisfied customers were never asked to write anything down.</p>
+      <p>Nothing on this whole page is cheaper to fix. It costs a message to your last ten customers.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="h">What A Homeowner Asks Before Booking &mdash; And What Your Site Answers</div>
+    <div class="flag">
+      <div class="lab">The four questions, in the order they get asked</div>
+      <div class="code">
+&quot;Are they insured?&quot;              <span class="ph">&#10007; not mentioned anywhere</span>
+&quot;Are they qualified?&quot;            <span class="ph">&#10007; no NVQ, FMB, TrustMark shown</span>
+&quot;Do other people rate them?&quot;     <span class="ph">&#10007; one testimonial, no count</span>
+&quot;Is the work any good?&quot;          <span class="ok">&#10003; yes &mdash; your photos answer this well</span>
+      </div>
+      <p><b>You answer the one question that is hardest to fake and none of the three that are easy.</b>
+      If you hold public liability cover and any qualification, publishing them takes an afternoon and
+      moves four of the red rows above.</p>
+      <p>We have not assumed you hold any of these. If you do not, say so on the call and we will take
+      them off the list rather than build a page around them.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="h">The Opportunity In Numbers</div>
+    <div class="opp">
+      <div class="ocard"><div class="lab">One extra kitchen a month</div><div class="big">&pound;96,000</div><div class="small">per year at a &pound;8,000 average</div></div>
+      <div class="ocard"><div class="lab">Two extra a month</div><div class="big">&pound;192,000</div><div class="small">per year</div></div>
+      <div class="ocard"><div class="lab">Tracking installed</div><div class="big">Week 1</div><div class="small">before any ad spend at all</div></div>
+    </div>
+    <p class="oppnote"><b>&pound;8,000 is our assumption, not your figure</b> &mdash; tell us your real
+    average kitchen and renovation value on the call and all of these change. It is used here only to
+    show the shape of the thing: at your job sizes, <b>a single additional job a month is a different
+    business</b>, and the first two items on the roadmap below cost nothing but a week of attention.</p>
+  </section>
+
+  <section>
+    <div class="h">Projected Grade After Build</div>
+    <div class="arrow">
+      <div class="gradecard gc-C" style="flex:1"><div class="bigletter bl-C">C&minus;</div><div class="score100">44 / 100 today</div></div>
+      <div class="ar">&rarr;</div>
+      <div class="gradecard gc-B" style="flex:1"><div class="bigletter" style="color:#3fb950;text-shadow:0 0 40px rgba(63,185,80,.45)">A&minus;</div><div class="score100">88 / 100 projected</div></div>
+    </div>
+    <p class="oppnote">Projected, not promised. It reflects the twelve rows above being fixed &mdash;
+    which is within your control and ours. <b>It is not a projection of leads, jobs or revenue.</b></p>
+  </section>
+
+  <section>
+    <div class="h">Fix First &mdash; No Spend Required</div>
+    <ul class="road">
+      <li><b>Rewrite the homepage title tag and add a meta description.</b> Ten minutes. It is your Google headline and it currently says nothing</li>
+      <li><b>Install GA4 and conversion tracking.</b> Nothing can be advertised or improved until calls and enquiries are counted</li>
+      <li><b>Ask your last ten customers for a Google review.</b> Twenty years of goodwill, one testimonial published</li>
+      <li><b>Publish your insurance and any qualifications</b> — if you hold them, they answer three of the four questions above</li>
+    </ul>
+    <div class="h" style="margin-top:24px">Build Next</div>
+    <ul class="road road2">
+      <li><b>An enquiry form on the homepage itself</b> — asking the job type, rough budget and timescale, so you can price the good ones first</li>
+      <li><b>A star rating and review count</b> shown on every page, not one paragraph on one page</li>
+      <li><b>A landlord and rental page</b> — repeat commercial work, and you already do it</li>
+      <li><b>Then advertising</b>, pointed at kitchen and renovation searches in Swansea and the Gower, measured from day one</li>
+    </ul>
+  </section>
+
+  <div class="cta">
+    <h2>Twenty years of work, three good service pages, and nothing counting the phone calls.</h2>
+    <p>The craft side of this is already right. What is missing is the measurement and the proof
+    &mdash; and those are the two cheapest things on the list.</p>
+  </div>
+
+</div>
+
+<footer>
+  Prepared by Andrei Givero &middot; AG1 Consulting &middot; 25 August 2026<br>
+  For Alexander Durrant of Dial Carpentry (company 14711488), Loughor, Swansea. All findings were read
+  from dialcarpentry.com and its served page source on 25 August 2026 and reflect that date only.
+  <b>Absence of a tag, accreditation, insurance statement or review count means it was not present in
+  the served page &mdash; not that you do not hold it.</b> Qualifications or cover you hold but do not
+  publish would not appear in this check, and the finding is about what a visitor can see. Your quote
+  form at /quote-request is rendered by Squarespace after page load, so <b>its fields could not be read
+  and are not assessed here</b>. Grades are our own assessment against a consistent framework and are
+  not an industry-standard measure. The &pound;8,000 average job value is our assumption and should be
+  replaced with your own figure &mdash; the revenue lines are arithmetic on that assumption, not a
+  forecast, not a projection of your results and not a guarantee. Trading history is as stated on your
+  website; company number and incorporation are from Companies House.
+</footer>
+</body></html>
